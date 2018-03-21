@@ -105,19 +105,3 @@ class Blockchain{
     }
 
 }
-
-const jsCoin = new Blockchain();
-
-jsCoin.addBlock(new Block(1, "20/07/2017", { amount: 4 }));
-jsCoin.addBlock(new Block(2, "20/07/2017", { amount: 8 }));
-
-
-console.log('Blockchain valid? ' + jsCoin.isChainValid());
-
-console.log('Changing a block...');
-jsCoin.chain[1].data = { amount: 100 };
-// jsCoin.chain[1].hash = jsCoin.chain[1].calculateHash();
-
-console.log("Blockchain valid? " + jsCoin.isChainValid());
-
-// console.log(JSON.stringify(jsCoin, null, 4));
